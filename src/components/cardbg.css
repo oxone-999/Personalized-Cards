@@ -1,0 +1,48 @@
+.card_main {
+  position: relative;
+}
+
+.cardbg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardbg img {
+  width: 40rem;
+}
+
+.image {
+  position: absolute;
+  top: 7rem;
+  left: 2rem;
+  display: flex;
+  width: 13rem;
+  height: 13rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 10rem;
+}
+
+.para {
+  position: absolute;
+  top: 9rem;
+  left: 18rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 21rem;
+  height: 9rem;
+  word-wrap: break-word;
+}
+
+.para p {
+  color: #333333;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 1rem;
+  width: 18rem;
+}

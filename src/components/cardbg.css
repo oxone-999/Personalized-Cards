@@ -1,3 +1,16 @@
+.card{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 100vh;
+}
+.card-body{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
 .card_main {
   position: relative;
 }
@@ -9,13 +22,13 @@
 }
 
 .cardbg img {
-  width: 40rem;
+  width: 60rem;
 }
 
 .image {
   position: absolute;
-  top: 7rem;
-  left: 2rem;
+  top: 14rem;
+  left: 36rem;
   display: flex;
   width: 13rem;
   height: 13rem;
@@ -24,18 +37,25 @@
 }
 
 .image img {
-  width: 10rem;
+  width: 17rem;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 .para {
   position: absolute;
-  top: 9rem;
-  left: 18rem;
+  top: 13rem;
+  left: 56rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  width: 21rem;
-  height: 9rem;
+  width: 34rem;
+  height: 14rem;
   word-wrap: break-word;
 }
 
@@ -44,5 +64,58 @@
   font-weight: 700;
   font-size: 1.3rem;
   padding: 1rem;
-  width: 18rem;
+  width: 30rem;
+  text-align: left;
+}
+
+.PB-range-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  background: #D5DBE1;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.PB-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000000;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.PB-range-slider::-webkit-slider-thumb:hover {
+  box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.16);
+  transition: 0.3s ease-in-out;
+}
+
+.PB-range-slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000000;
+  cursor: pointer;
+}
+
+.PB-range-slider-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #C6CACE;
+  box-shadow: 0px 1px 2px 0px #1F1E241F;
+}
+
+.PB-range-slidervalue {
+  font-weight: 600;
 }

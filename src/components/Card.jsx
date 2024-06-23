@@ -14,8 +14,9 @@ const StyledParagraph = styled.p`
 `;
 
 function Appp() {
-  const [backgroundImage, setBackgroundImage] = useState("");
+  const [backgroundImage, setBackgroundImage] = useState("./images/def.jpg");
   const [paragraphText, setParagraphText] = useState("");
+  const [fontSize, setFontSize] = useState(20);
 
   const handleImageUpload = (event) => {
     const imageFile = event.target.files[0];
@@ -35,40 +36,52 @@ function Appp() {
     console.log("Paragraph:", paragraphText);
   };
 
+  const handleFontSizeChange = (event) => {
+    const newFontSize = parseInt(event.target.value); // Convert string value to integer
+    setFontSize(newFontSize);
+  };
+
   return (
-    <Card>
-      <Card.Body>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group controlId="formFile" className="mb-3">
-            <Form.Label>Upload Image</Form.Label>
-            <Form.Control type="file" onChange={handleImageUpload} />
-          </Form.Group>
-          <Form.Group controlId="formText">
-            <Form.Label>Paragraph</Form.Label>
-            <Form.Control
-              as="textarea"
-              rows={3}
-              value={paragraphText}
-              onChange={handleParagraphChange}
-            />
-          </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
-      </Card.Body>
-      <div className="card_main">
-        <div className="cardbg">
-            <img src="./images/Card BG.png" />
+    <div className="card">
+      <div className="card-body">
+        <div className="form-group mb-3">
+          <label for="formFile">Upload Image</label>
+          <input type="file" id="formFile" onChange={handleImageUpload} />
         </div>
-        <div className="image">
-            <img src={backgroundImage} alt="Card background" />
+        <div className="form-group">
+          <label for="formText">Paragraph</label>
+          <textarea
+            id="formText"
+            rows={3}
+            value={paragraphText}
+            onChange={handleParagraphChange}
+          />
         </div>
-        <div className="para">
-            <p>{paragraphText}</p>
+        <div className="PB-range-slider-div">
+          <input
+            type="range"
+            min="1"
+            max="72"
+            defaultValue="20"
+            className="PB-range-slider"
+            id="myRange"
+            onChange={handleFontSizeChange}
+          />
+          <p className="PB-range-slidervalue">{fontSize}px</p>
         </div>
       </div>
-    </Card>
+      <div className="card_main">
+        <div className="cardbg">
+          <img src="./images/Card BG.png" />
+          <div className="image">
+            <img src={backgroundImage} alt="Card background" />
+          </div>
+          <div className="para">
+            <p style={{ fontSize: `${fontSize}px` }}>{paragraphText}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 

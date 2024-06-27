@@ -1,24 +1,29 @@
-.card{
-  display:flex;
+.card {
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 100vw;
   height: 100vh;
 }
-.card-body{
+
+.card-body {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
 
 .card_main {
-  position: relative;
-}
-
-.cardbg {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.cardbg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60rem;
 }
 
 .cardbg img {
@@ -27,8 +32,8 @@
 
 .image {
   position: absolute;
-  top: 14rem;
-  left: 36rem;
+  top: 32%;
+  left: 10%;
   display: flex;
   width: 13rem;
   height: 13rem;
@@ -40,7 +45,7 @@
   width: 17rem;
 }
 
-.form-group{
+.form-group {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -49,8 +54,8 @@
 
 .para {
   position: absolute;
-  top: 13rem;
-  left: 56rem;
+  top: 30%;
+  left: 42%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,7 +69,7 @@
   font-weight: 700;
   font-size: 1.3rem;
   padding: 1rem;
-  width: 30rem;
+  width: 32rem;
   text-align: left;
 }
 
@@ -73,11 +78,11 @@
   width: 100%;
   height: 4px;
   border-radius: 5px;
-  background: #D5DBE1;
+  background: #d5dbe1;
   outline: none;
   opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
 .PB-range-slider::-webkit-slider-thumb {
@@ -112,10 +117,65 @@
   width: 20rem;
   padding: 1rem;
   border-radius: 6px;
-  border: 1px solid #C6CACE;
-  box-shadow: 0px 1px 2px 0px #1F1E241F;
+  border: 1px solid #c6cace;
+  box-shadow: 0px 1px 2px 0px #1f1e241f;
 }
 
 .PB-range-slidervalue {
   font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 30rem;
+    padding: 1.5rem;
+  }
+  .cardbg img {
+    width: 22rem;
+  }
+
+  .image img {
+    width:6rem;
+  }
+
+  .image {
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    display: flex;
+    width: 13rem;
+    height: 13rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    justify-content: flex-start;
+  }
+
+  .para {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34rem;
+    height: 14rem;
+    word-wrap: break-word;
+  }
+
+  .para p {
+    color: #333333;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 1rem;
+    width: 10rem;
+    text-align: left;
+  }
+
 }

@@ -126,9 +126,8 @@ function Appp() {
     <div className="card">
       <div className="card-body">
         <div className="form-group mb-3">
-          {/* <label for="formFile">Upload Image</label>
-          <input type="file" id="formFile" onChange={handleImageUpload} /> */}
-          <Cropper />
+          <label>Upload Image</label>
+          <input type="file" id="formFile" onChange={handleImageUpload} />
         </div>
         <div className="form-group">
           <label>Paragraph</label>
@@ -197,6 +196,7 @@ function Appp() {
           </div>
         </div>
       </div>
+      <Cropper />
     </div>
   );
 }

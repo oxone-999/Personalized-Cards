@@ -155,25 +155,23 @@ function Appp() {
     }
   }
 
-
-
   const [backgroundImage, setBackgroundImage] = useState("./images/def.jpg");
   const [paragraphText, setParagraphText] = useState("");
   const [fontSize, setFontSize] = useState(20);
 
-const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-  const imageFile = event.target.files?.[0];
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const imageFile = event.target.files?.[0];
 
-  if (!imageFile) return; // Handle no file selected case
+    if (!imageFile) return; // Handle no file selected case
 
-  const reader = new FileReader();
-  reader.onload = (e: ProgressEvent<FileReader>) => {
-    if (e.target?.result) {
-      setBackgroundImage(e.target.result as string);
-    }
+    const reader = new FileReader();
+    reader.onload = (e: ProgressEvent<FileReader>) => {
+      if (e.target?.result) {
+        setBackgroundImage(e.target.result as string);
+      }
+    };
+    reader.readAsDataURL(imageFile);
   };
-  reader.readAsDataURL(imageFile);
-};
 
   const handleParagraphChange = (event) => {
     setParagraphText(event.target.value);
@@ -190,7 +188,6 @@ const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newFontSize = parseInt(event.target.value); // Convert string value to integer
     setFontSize(newFontSize);
   };
-
 
   return (
     <div className="card">
@@ -214,25 +211,27 @@ const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
             </button>
           </div>
         </div>
-        {!!imgSrc && (
-          <ReactCrop
-            crop={crop}
-            onChange={(_, percentCrop) => setCrop(percentCrop)}
-            onComplete={(c) => setCompletedCrop(c)}
-            aspect={aspect}
-            // minWidth={400}
-            minHeight={100}
-            // circularCrop
-          >
-            <img
-              ref={imgRef}
-              alt="Crop me"
-              src={imgSrc}
-              style={{ transform: `scale(${scale}) rotate(${rotate}deg)` }}
-              onLoad={onImageLoad}
-            />
-          </ReactCrop>
-        )}
+        <div className="cropimg">
+          {!!imgSrc && (
+            <ReactCrop
+              crop={crop}
+              onChange={(_, percentCrop) => setCrop(percentCrop)}
+              onComplete={(c) => setCompletedCrop(c)}
+              aspect={aspect}
+              // minWidth={400}
+              minHeight={100}
+              // circularCrop
+            >
+              <img
+                ref={imgRef}
+                alt="Crop me"
+                src={imgSrc}
+                style={{ transform: `scale(${scale}) rotate(${rotate}deg)` }}
+                onLoad={onImageLoad}
+              />
+            </ReactCrop>
+          )}
+        </div>
       </div>
 
       <div className="card-body">
@@ -274,8 +273,8 @@ const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
                     style={{
                       border: "1px solid black",
                       objectFit: "contain",
-                      width: completedCrop.width/2,
-                      height: completedCrop.height/2,
+                      width: completedCrop.width / 2,
+                      height: completedCrop.height / 2,
                     }}
                   />
                 </div>

@@ -131,8 +131,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15rem;
-    height: 20rem;
+    width: 5rem;
+    height: 10rem;
   }
   .card-body {
     display: flex;

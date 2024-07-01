@@ -264,24 +264,22 @@ function Appp() {
       <div className="card_main">
         <div className="cardbg">
           <img src="./images/Card BG.png" />
-          <div className="image">
-            {!!completedCrop && (
-              <>
-                <div>
-                  <canvas
-                    ref={previewCanvasRef}
-                    style={{
-                      border: "1px solid black",
-                      objectFit: "contain",
-                      width: completedCrop.width*1.5,
-                      height: completedCrop.height*1.5,
-                    }}
-                  />
-                </div>
-              </>
-            )}
-            {/* <img src={backgroundImage} alt="Card background" /> */}
-          </div>
+          {!!completedCrop && (
+            <>
+              <div className="image">
+                <canvas
+                  ref={previewCanvasRef}
+                  style={{
+                    border: "1px solid black",
+                    objectFit: "contain",
+                    width: completedCrop.width * 1.5,
+                    height: completedCrop.height * 1.5,
+                  }}
+                />
+              </div>
+            </>
+          )}
+          {/* <img src={backgroundImage} alt="Card background" /> */}
           <div className="para">
             <p style={{ fontSize: `${fontSize}px` }}>{paragraphText}</p>
           </div>

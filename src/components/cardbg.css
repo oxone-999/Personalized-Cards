@@ -74,14 +74,6 @@
   text-align: left;
 }
 
-.cropimg{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 15rem;
-  height: 20rem;
-}
-
 .PB-range-slider {
   -webkit-appearance: none;
   width: 100%;
@@ -135,6 +127,13 @@
 }
 
 @media screen and (max-width: 768px) {
+  .cropimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 20rem;
+  }
   .card-body {
     display: flex;
     flex-direction: column;
@@ -148,7 +147,7 @@
   }
 
   .image img {
-    width:6rem;
+    width: 6rem;
   }
 
   .image {
@@ -186,5 +185,4 @@
     width: 10rem;
     text-align: left;
   }
-
 }

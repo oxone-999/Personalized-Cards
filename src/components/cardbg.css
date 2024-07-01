@@ -126,14 +126,16 @@
   font-weight: 600;
 }
 
-@media screen and (max-width: 768px) {
-  .cropimg {
+.cropimg {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 5rem;
     height: 10rem;
   }
+
+@media screen and (max-width: 768px) {
+  
   .card-body {
     display: flex;
     flex-direction: column;

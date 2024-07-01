@@ -130,11 +130,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 5rem;
-    height: 10rem;
-  }
+    width: 20rem;
+    height: 20rem;
+}
 
 @media screen and (max-width: 768px) {
+  .cropimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 10rem;
+}
   
   .card-body {
     display: flex;

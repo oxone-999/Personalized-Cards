@@ -8,15 +8,12 @@ import ReactCrop, {
   makeAspectCrop,
   Crop,
   PixelCrop,
-  convertToPixelCrop,
 } from "react-image-crop";
 import { canvasPreview } from "./canvasPreview";
 import { useDebounceEffect } from "./useDebounceEffect";
 
 import "react-image-crop/dist/ReactCrop.css";
 
-// This is to demonstate how to make and center a % aspect crop
-// which is a bit trickier so we use some helper functions.
 function centerAspectCrop(
   mediaWidth: number,
   mediaHeight: number,
@@ -26,7 +23,7 @@ function centerAspectCrop(
     makeAspectCrop(
       {
         unit: "%",
-        width: 90,
+        width: 50,
       },
       aspect,
       mediaWidth,
@@ -51,7 +48,7 @@ function Appp() {
 
   function onSelectFile(e: React.ChangeEvent<HTMLInputElement>) {
     if (e.target.files && e.target.files.length > 0) {
-      setCrop(undefined); // Makes crop preview update between images.
+      setCrop(undefined);
       const reader = new FileReader();
       reader.addEventListener("load", () =>
         setImgSrc(reader.result?.toString() || "")
@@ -67,56 +64,6 @@ function Appp() {
     }
   }
 
-  async function onDownloadCropClick() {
-    const image = imgRef.current;
-    const previewCanvas = previewCanvasRef.current;
-    if (!image || !previewCanvas || !completedCrop) {
-      throw new Error("Crop canvas does not exist");
-    }
-
-    // This will size relative to the uploaded image
-    // size. If you want to size according to what they
-    // are looking at on screen, remove scaleX + scaleY
-    const scaleX = image.naturalWidth / image.width;
-    const scaleY = image.naturalHeight / image.height;
-
-    const offscreen = new OffscreenCanvas(
-      completedCrop.width * scaleX,
-      completedCrop.height * scaleY
-    );
-    const ctx = offscreen.getContext("2d");
-    if (!ctx) {
-      throw new Error("No 2d context");
-    }
-
-    ctx.drawImage(
-      previewCanvas,
-      0,
-      0,
-      previewCanvas.width,
-      previewCanvas.height,
-      0,
-      0,
-      offscreen.width,
-      offscreen.height
-    );
-    // You might want { type: "image/jpeg", quality: <0 to 1> } to
-    // reduce image size
-    const blob = await offscreen.convertToBlob({
-      type: "image/png",
-    });
-
-    if (blobUrlRef.current) {
-      URL.revokeObjectURL(blobUrlRef.current);
-    }
-    blobUrlRef.current = URL.createObjectURL(blob);
-
-    if (hiddenAnchorRef.current) {
-      hiddenAnchorRef.current.href = blobUrlRef.current;
-      hiddenAnchorRef.current.click();
-    }
-  }
-
   useDebounceEffect(
     async () => {
       if (
@@ -125,7 +72,6 @@ function Appp() {
         imgRef.current &&
         previewCanvasRef.current
       ) {
-        // We use canvasPreview as it's much faster than imgPreview.
         canvasPreview(
           imgRef.current,
           previewCanvasRef.current,
@@ -138,22 +84,6 @@ function Appp() {
     100,
     [completedCrop, scale, rotate]
   );
-
-  function handleToggleAspectClick() {
-    if (aspect) {
-      setAspect(undefined);
-    } else {
-      setAspect(16 / 9);
-
-      if (imgRef.current) {
-        const { width, height } = imgRef.current;
-        const newCrop = centerAspectCrop(width, height, 1 / 1);
-        setCrop(newCrop);
-        // Updates the preview
-        setCompletedCrop(convertToPixelCrop(newCrop, width, height));
-      }
-    }
-  }
 
   const [backgroundImage, setBackgroundImage] = useState("./images/def.jpg");
   const [paragraphText, setParagraphText] = useState("");
@@ -195,20 +125,6 @@ function Appp() {
         <div className="Crop-Controls">
           <input type="file" accept="image/*" onChange={onSelectFile} />
           <div>
-            <label htmlFor="scale-input">Scale: </label>
-            <input
-              id="scale-input"
-              type="number"
-              step="0.1"
-              value={scale}
-              disabled={!imgSrc}
-              onChange={(e) => setScale(Number(e.target.value))}
-            />
-          </div>
-          <div>
-            <button onClick={handleToggleAspectClick}>
-              Toggle aspect {aspect ? "off" : "on"}
-            </button>
           </div>
         </div>
         <div className="cropimg">
@@ -226,7 +142,6 @@ function Appp() {
                 ref={imgRef}
                 alt="Crop me"
                 src={imgSrc}
-                style={{ transform: `scale(${scale}) rotate(${rotate}deg)` }}
                 onLoad={onImageLoad}
               />
             </ReactCrop>
@@ -272,8 +187,8 @@ function Appp() {
                   style={{
                     border: "1px solid black",
                     objectFit: "contain",
-                    width: completedCrop.width*1.5,
-                    height: completedCrop.height*1.5,
+                    width: "15rem",
+                    height: "15rem",
                   }}
                 />
               </div>

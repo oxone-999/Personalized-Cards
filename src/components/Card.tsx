@@ -123,7 +123,13 @@ function Appp() {
     <div className="card">
       <div className="App">
         <div className="Crop-Controls">
-          <input type="file" accept="image/*" onChange={onSelectFile} />
+          <input
+            id="picture"
+            type="file"
+            accept="image/*"
+            onChange={onSelectFile}
+            className="inputFile"
+          />
         </div>
         <div className="card-body">
           <div className="cropimg">

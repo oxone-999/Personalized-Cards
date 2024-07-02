@@ -166,6 +166,19 @@
     width: 12rem;
   }
 
+  .inputFile{
+    display: flex;
+    height: 30px; /* Adjust as needed */
+    width: 100%;
+    border-radius: 4px; /* Adjust as needed */
+    border: 1px solid #e0e0e0; /* Adjust color as needed */
+    background-color: #ffffff;
+    padding: 3px;
+    text-align: left;
+    font-size: 0.875rem; /* Adjust as needed */
+    color: #777777;
+  }
+
   .cropimg {
     display: flex;
     justify-content: center;

@@ -162,6 +162,10 @@
 }
 
 @media screen and (max-width: 900px) {
+  .PB-range-slider-div {
+    width: 18rem;
+  }
+
   .cropimg {
     display: flex;
     justify-content: center;
@@ -169,7 +173,7 @@
     width: 12rem;
   }
 
-  .card_main{
+  .card_main {
     margin-top: 4rem;
   }
 
@@ -178,7 +182,7 @@
     height: 20rem;
   }
 
-  .content{
+  .content {
     display: flex;
     flex-direction: column;
   }
@@ -191,7 +195,7 @@
     padding: 1.5rem;
   }
 
-  .form-group{
+  .form-group {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -201,10 +205,9 @@
     background-color: #d5dbe1;
     color: #000000;
     font-size: 1rem;
-    width: 20rem;
+    width: 19rem;
     font-weight: 600;
     margin: 1rem;
-    margin-left: 0;
   }
 
   .cardbg img {

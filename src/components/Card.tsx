@@ -180,12 +180,13 @@ function Appp() {
               <div className="image">
                 <canvas
                   ref={previewCanvasRef}
-                  style={{
-                    border: "1px solid black",
-                    objectFit: "contain",
-                    width: "15rem",
-                    height: "15rem",
-                  }}
+                  className="canvas"
+                  // style={{
+                  //   border: "1px solid black",
+                  //   objectFit: "contain",
+                  //   width: "15rem",
+                  //   height: "15rem",
+                  // }}
                 />
               </div>
             </>

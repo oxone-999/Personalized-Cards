@@ -168,6 +168,8 @@
     height: 13rem;
     justify-content: center;
     align-items: center;
+    padding: 3rem;
+    background-color: #d5dbe1;
   }
 
   .card {

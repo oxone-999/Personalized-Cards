@@ -272,8 +272,8 @@ function Appp() {
                   style={{
                     border: "1px solid black",
                     objectFit: "contain",
-                    width: completedCrop.width,
-                    height: completedCrop.height,
+                    width: completedCrop.width*1.5,
+                    height: completedCrop.height*1.5,
                   }}
                 />
               </div>

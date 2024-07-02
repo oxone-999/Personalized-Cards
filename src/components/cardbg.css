@@ -9,7 +9,7 @@
   color: #242424;
 }
 
-.App{
+.App {
   height: 10rem;
 }
 
@@ -37,7 +37,7 @@
   width: 60rem;
 }
 
-.image{
+.image {
   position: absolute;
   top: 27%;
   left: 7%;
@@ -62,7 +62,7 @@
   align-items: flex-start;
 }
 
-.form-group textarea{
+.form-group textarea {
   background-color: #d5dbe1;
   color: #000000;
   font-size: 1rem;
@@ -136,7 +136,7 @@
   border-radius: 6px;
   border: 1px solid #8b8b8b;
   box-shadow: 0px 1px 2px 0px #1f1e241f;
-  margin:1rem;
+  margin: 1rem;
 }
 
 .PB-range-slidervalue {
@@ -160,12 +160,22 @@
     height: 10rem;
   }
 
+  .form-group textarea {
+    background-color: #d5dbe1;
+    color: #000000;
+    font-size: 1rem;
+    width: 22rem;
+    font-weight: 600;
+    margin:1rem;
+    margin-left: 0;
+  }
+
   .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     width: 100%;
-    height: 30rem;
     padding: 1.5rem;
   }
   .cardbg img {

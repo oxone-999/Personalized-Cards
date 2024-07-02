@@ -260,13 +260,13 @@
 
   .para {
     position: absolute;
-    top: 2%;
-    left: 2%;
+    top: 28%;
+    left: 44%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 34rem;
-    height: 14rem;
+    width: 15rem;
+    height: 8rem;
     word-wrap: break-word;
   }
 
@@ -275,7 +275,7 @@
     font-weight: 700;
     font-size: 1.3rem;
     padding: 1rem;
-    width: 10rem;
+    width: 15rem;
     text-align: left;
   }
 }

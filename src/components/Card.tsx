@@ -47,7 +47,7 @@ function Appp() {
   const [completedCrop, setCompletedCrop] = useState<PixelCrop>();
   const [scale, setScale] = useState(1);
   const [rotate, setRotate] = useState(0);
-  const [aspect, setAspect] = useState<number | undefined>(16 / 9);
+  const [aspect, setAspect] = useState<number | undefined>(1 / 1);
 
   function onSelectFile(e: React.ChangeEvent<HTMLInputElement>) {
     if (e.target.files && e.target.files.length > 0) {
@@ -147,7 +147,7 @@ function Appp() {
 
       if (imgRef.current) {
         const { width, height } = imgRef.current;
-        const newCrop = centerAspectCrop(width, height, 16 / 9);
+        const newCrop = centerAspectCrop(width, height, 1 / 1);
         setCrop(newCrop);
         // Updates the preview
         setCompletedCrop(convertToPixelCrop(newCrop, width, height));

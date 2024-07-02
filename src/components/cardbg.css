@@ -17,6 +17,7 @@
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  height: 100%;
 }
 
 .card_main {
@@ -160,6 +161,15 @@
     height: 10rem;
   }
 
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
   .form-group textarea {
     background-color: #d5dbe1;
     color: #000000;
@@ -169,15 +179,7 @@
     margin:1rem;
     margin-left: 0;
   }
-
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    padding: 1.5rem;
-  }
+  
   .cardbg img {
     width: 22rem;
   }

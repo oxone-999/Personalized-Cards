@@ -190,10 +190,12 @@
   }
 
   .card-body {
+    align-self: center;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
+    width: 40rem;
+    height: 100%;
     padding: 1.5rem;
   }
 

@@ -13,11 +13,11 @@
   height: 10rem;
 }
 
-.card-body {
+/* .card-body {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-}
+} */
 
 .card_main {
   display: flex;
@@ -62,12 +62,12 @@
   align-items: flex-start;
 }
 
-.form-group textarea {
+/* .form-group textarea {
   background-color: #d5dbe1;
   color: #000000;
   font-size: 1rem;
   font-weight: 600;
-}
+} */
 
 .para {
   position: absolute;

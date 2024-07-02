@@ -151,7 +151,7 @@
   height: 20rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .cropimg {
     display: flex;
     justify-content: center;

@@ -5,6 +5,8 @@
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  background-color: #d5dbe1;
+  color: #242424;
 }
 
 .App{
@@ -60,6 +62,13 @@
   align-items: flex-start;
 }
 
+.form-group textarea{
+  background-color: #d5dbe1;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .para {
   position: absolute;
   top: 30%;
@@ -86,7 +95,7 @@
   width: 100%;
   height: 4px;
   border-radius: 5px;
-  background: #d5dbe1;
+  background: #7c7c7c;
   outline: none;
   opacity: 0.7;
   -webkit-transition: 0.2s;
@@ -125,8 +134,9 @@
   width: 20rem;
   padding: 1rem;
   border-radius: 6px;
-  border: 1px solid #c6cace;
+  border: 1px solid #8b8b8b;
   box-shadow: 0px 1px 2px 0px #1f1e241f;
+  margin:1rem;
 }
 
 .PB-range-slidervalue {

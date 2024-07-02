@@ -31,13 +31,11 @@
   width: 60rem;
 }
 
-.image {
+.image{
   position: absolute;
   top: 27%;
   left: 7%;
   display: flex;
-  width: 13rem;
-  height: 13rem;
   justify-content: center;
   align-items: center;
   overflow: hidden;

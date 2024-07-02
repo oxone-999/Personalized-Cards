@@ -124,8 +124,7 @@ function Appp() {
       <div className="App">
         <div className="Crop-Controls">
           <input type="file" accept="image/*" onChange={onSelectFile} />
-          <div>
-          </div>
+          <div></div>
         </div>
         <div className="cropimg">
           {!!imgSrc && (
@@ -150,10 +149,7 @@ function Appp() {
       </div>
 
       <div className="card-body">
-        <div className="form-group mb-3">
-          {/* <label>Upload Image</label>
-          <input type="file" id="formFile" onChange={handleImageUpload} /> */}
-        </div>
+        <div className="form-group mb-3"></div>
         <div className="form-group">
           <label>Paragraph</label>
           <textarea
@@ -194,7 +190,7 @@ function Appp() {
               </div>
             </>
           )}
-          {/* <img src={backgroundImage} alt="Card background" /> */}
+
           <div className="para">
             <p style={{ fontSize: `${fontSize}px` }}>{paragraphText}</p>
           </div>

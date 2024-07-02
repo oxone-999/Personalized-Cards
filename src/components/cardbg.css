@@ -5,12 +5,14 @@
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  background-color: #d5dbe1;
+  background-color: #ffffff;
   color: #242424;
 }
 
 .App {
-  height: 10rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-body {
@@ -68,6 +70,13 @@
   color: #000000;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.canvas {
+  border: 1px solid black;
+  object-fit: contain;
+  width: 15rem;
+  height: 15rem;
 }
 
 .para {
@@ -157,17 +166,36 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 1rem;
-    width: 8rem;
+    padding-top: 2rem;
+    width: 12rem;
+  }
+
+  .card_main{
+    margin-top: 4rem;
+  }
+
+  .cardbg {
+    width: 28rem;
+    height: 20rem;
+  }
+
+  .content{
+    display: flex;
+    flex-direction: column;
   }
 
   .card-body {
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
     padding: 1.5rem;
+  }
+
+  .form-group{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .form-group textarea {
@@ -200,7 +228,7 @@
     padding: 3rem;
     background-color: #ffffff;
   }
-  .canvas{
+  .canvas {
     border: 1px solid black;
     object-fit: contain;
     width: 7rem;

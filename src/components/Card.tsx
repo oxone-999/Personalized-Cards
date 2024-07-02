@@ -124,52 +124,51 @@ function Appp() {
       <div className="App">
         <div className="Crop-Controls">
           <input type="file" accept="image/*" onChange={onSelectFile} />
-          <div></div>
         </div>
-        <div className="cropimg">
-          {!!imgSrc && (
-            <ReactCrop
-              crop={crop}
-              onChange={(_, percentCrop) => setCrop(percentCrop)}
-              onComplete={(c) => setCompletedCrop(c)}
-              aspect={aspect}
-              // minWidth={400}
-              minHeight={100}
-              // circularCrop
-            >
-              <img
-                ref={imgRef}
-                alt="Crop me"
-                src={imgSrc}
-                onLoad={onImageLoad}
+        <div className="card-body">
+          <div className="cropimg">
+            {!!imgSrc && (
+              <ReactCrop
+                crop={crop}
+                onChange={(_, percentCrop) => setCrop(percentCrop)}
+                onComplete={(c) => setCompletedCrop(c)}
+                aspect={aspect}
+                // minWidth={400}
+                minHeight={100}
+                // circularCrop
+              >
+                <img
+                  ref={imgRef}
+                  alt="Crop me"
+                  src={imgSrc}
+                  onLoad={onImageLoad}
+                />
+              </ReactCrop>
+            )}
+          </div>
+          <div className="content">
+            <div className="form-group">
+              <label>Paragraph</label>
+              <textarea
+                id="formText"
+                rows={3}
+                value={paragraphText}
+                onChange={handleParagraphChange}
               />
-            </ReactCrop>
-          )}
-        </div>
-      </div>
-
-      <div className="card-body">
-        <div className="form-group mb-3"></div>
-        <div className="form-group">
-          <label>Paragraph</label>
-          <textarea
-            id="formText"
-            rows={3}
-            value={paragraphText}
-            onChange={handleParagraphChange}
-          />
-        </div>
-        <div className="PB-range-slider-div">
-          <input
-            type="range"
-            min="1"
-            max="72"
-            defaultValue="20"
-            className="PB-range-slider"
-            id="myRange"
-            onChange={handleFontSizeChange}
-          />
-          <p className="PB-range-slidervalue">{fontSize}px</p>
+            </div>
+            <div className="PB-range-slider-div">
+              <input
+                type="range"
+                min="1"
+                max="72"
+                defaultValue="20"
+                className="PB-range-slider"
+                id="myRange"
+                onChange={handleFontSizeChange}
+              />
+              <p className="PB-range-slidervalue">{fontSize}px</p>
+            </div>
+          </div>
         </div>
       </div>
       <div className="card_main">
@@ -178,16 +177,7 @@ function Appp() {
           {!!completedCrop && (
             <>
               <div className="image">
-                <canvas
-                  ref={previewCanvasRef}
-                  className="canvas"
-                  // style={{
-                  //   border: "1px solid black",
-                  //   objectFit: "contain",
-                  //   width: "15rem",
-                  //   height: "15rem",
-                  // }}
-                />
+                <canvas ref={previewCanvasRef} className="canvas" />
               </div>
             </>
           )}

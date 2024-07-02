@@ -7,6 +7,10 @@
   overflow-x: hidden;
 }
 
+.App{
+  height: 10rem;
+}
+
 .card-body {
   display: flex;
   justify-content: space-evenly;

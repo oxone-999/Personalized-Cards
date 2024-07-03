@@ -175,21 +175,21 @@ function Appp() {
               <p className="PB-range-slidervalue">{fontSize}px</p>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="card_main">
-        <div className="cardbg">
-          <img src="./images/Card BG.png" />
-          {!!completedCrop && (
-            <>
-              <div className="image">
-                <canvas ref={previewCanvasRef} className="canvas" />
-              </div>
-            </>
-          )}
+          <div className="card_main">
+            <div className="cardbg">
+              <img src="./images/Card BG.png" />
+              {!!completedCrop && (
+                <>
+                  <div className="image">
+                    <canvas ref={previewCanvasRef} className="canvas" />
+                  </div>
+                </>
+              )}
 
-          <div className="para">
-            <p style={{ fontSize: `${fontSize}px` }}>{paragraphText}</p>
+              <div className="para">
+                <p style={{ fontSize: `${fontSize}px` }}>{paragraphText}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

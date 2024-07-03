@@ -22,6 +22,10 @@
   height: 100%;
 }
 
+.content{
+  display: flex;
+}
+
 .card_main {
   display: flex;
   justify-content: center;
@@ -164,6 +168,7 @@
 @media screen and (max-width: 900px) {
   .PB-range-slider-div {
     width: 12rem;
+    height: 1rem;
   }
 
   .inputFile{
@@ -186,8 +191,8 @@
     width: 17rem;
   }
 
-  .card_main {
-    margin-top: 4rem;
+  .card_main{
+    height: 15rem;
   }
 
   .cardbg {
@@ -199,12 +204,14 @@
   .content {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    margin-top: 2rem;
   }
 
   .card-body {
     align-self: center;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 30rem;
@@ -224,7 +231,7 @@
     font-size: 1rem;
     width: 13rem;
     font-weight: 600;
-    margin: 1rem;
+    margin: 0.2rem;
   }
 
   .cardbg img {

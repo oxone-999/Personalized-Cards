@@ -16,14 +16,21 @@
 }
 
 .card-body {
+  align-self: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  width: 100%;
+  align-items: center;
+  width: 30rem;
   height: 100%;
+  padding: 1.5rem;
 }
 
-.content{
+.content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 .card_main {
@@ -164,13 +171,13 @@
   width: 20rem;
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (min-width: 450px) and (max-width: 900px) {
   .PB-range-slider-div {
     width: 12rem;
     height: 1rem;
   }
 
-  .inputFile{
+  .inputFile {
     display: flex;
     height: 30px; /* Adjust as needed */
     width: 100%;
@@ -190,7 +197,7 @@
     width: 17rem;
   }
 
-  .card_main{
+  .card_main {
     height: 15rem;
   }
 
@@ -253,11 +260,134 @@
     padding: 3rem;
     background-color: #ffffff;
   }
+
   .canvas {
     border: 1px solid black;
     object-fit: contain;
     width: 7rem;
     height: 7rem;
+  }
+
+  .card {
+    justify-content: flex-start;
+  }
+
+  .para {
+    position: absolute;
+    top: 28%;
+    left: 44%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 8rem;
+    word-wrap: break-word;
+  }
+
+  .para p {
+    color: #333333;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 1rem;
+    width: 15rem;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .PB-range-slider-div {
+    width: 12rem;
+    height: 1rem;
+  }
+
+  .inputFile {
+    display: flex;
+    height: 30px; /* Adjust as needed */
+    width: 100%;
+    border-radius: 4px; /* Adjust as needed */
+    border: 1px solid #e0e0e0; /* Adjust color as needed */
+    background-color: #ffffff;
+    padding: 3px;
+    text-align: left;
+    font-size: 0.875rem; /* Adjust as needed */
+    color: #777777;
+  }
+
+  .cropimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17rem;
+  }
+
+  .card_main {
+    height: 15rem;
+  }
+
+  .cardbg {
+    width: 28rem;
+    height: 20rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .card-body {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30rem;
+    height: 100%;
+    padding: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .form-group textarea {
+    background-color: #d5dbe1;
+    color: #000000;
+    font-size: 1rem;
+    width: 13rem;
+    font-weight: 600;
+    margin: 0.2rem;
+  }
+
+  .cardbg img {
+    width: 20rem;
+  }
+
+  .image img {
+    width: 6rem;
+  }
+
+  .image {
+    position: absolute;
+    top: 32%;
+    left: 18%;
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1.7rem;
+    background-color: #ffffff;
+  }
+
+  .canvas {
+    border: 1px solid black;
+    object-fit: contain;
+    width: 5rem;
+    height: 5rem;
   }
 
   .card {

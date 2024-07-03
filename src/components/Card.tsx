@@ -87,6 +87,7 @@ function Appp() {
 
   const [backgroundImage, setBackgroundImage] = useState("./images/def.jpg");
   const [paragraphText, setParagraphText] = useState("");
+  const [paragraphText2, setParagraphText2] = useState("");
   const [fontSize, setFontSize] = useState(20);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -106,6 +107,11 @@ function Appp() {
   const handleParagraphChange = (event) => {
     setParagraphText(event.target.value);
   };
+
+  const handleParagraphChange2 = (event) => {
+    setParagraphText2(event.target.value);
+  };
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -139,9 +145,7 @@ function Appp() {
                 onChange={(_, percentCrop) => setCrop(percentCrop)}
                 onComplete={(c) => setCompletedCrop(c)}
                 aspect={aspect}
-                // minWidth={400}
                 minHeight={100}
-                // circularCrop
               >
                 <img
                   ref={imgRef}
@@ -154,12 +158,21 @@ function Appp() {
           </div>
           <div className="content">
             <div className="form-group">
-              <label>Paragraph</label>
+              <label>Caption</label>
               <textarea
                 id="formText"
                 rows={3}
                 value={paragraphText}
                 onChange={handleParagraphChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>Title</label>
+              <textarea
+                id="formText"
+                rows={3}
+                value={paragraphText2}
+                onChange={handleParagraphChange2}
               />
             </div>
             <div className="PB-range-slider-div">
@@ -188,6 +201,10 @@ function Appp() {
 
               <div className="para">
                 <p style={{ fontSize: `${fontSize}px` }}>{paragraphText}</p>
+              </div>
+
+              <div className="para2">
+                <p>{paragraphText2}</p>
               </div>
             </div>
           </div>

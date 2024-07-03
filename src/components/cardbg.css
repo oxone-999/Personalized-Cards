@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Apricot Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Apricot Regular"),
+    url("./fonts/Apricot-BF650c4a6357ce1.woff") format("woff");
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -53,7 +61,7 @@
 
 .image {
   position: absolute;
-  top: 27%;
+  top: 24%;
   left: 7%;
   display: flex;
   justify-content: center;
@@ -62,6 +70,7 @@
   width: 13rem;
   height: 13rem;
   padding: 3rem;
+  padding-bottom: 5.5rem;
   background-color: #ffffff;
 }
 
@@ -102,13 +111,36 @@
   word-wrap: break-word;
 }
 
-.para p {
+.para2 {
+  position: absolute;
+  top: 63%;
+  left: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19rem;
+  height: 5rem;
+}
+
+.title {
+  font-size: 1rem;
+}
+
+.para p,
+.para2 p {
   color: #333333;
   font-weight: 700;
   font-size: 1.3rem;
   padding: 1rem;
   width: 32rem;
   text-align: left;
+  font-family: "Apricot Regular";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.para2 p {
+  font-size: 1.7rem;
 }
 
 .PB-range-slider {
@@ -258,6 +290,7 @@
     justify-content: center;
     align-items: center;
     padding: 3rem;
+    padding-bottom: 3.7rem;
     background-color: #ffffff;
   }
 
@@ -283,14 +316,29 @@
     height: 8rem;
     word-wrap: break-word;
   }
+  .para2 {
+    position: absolute;
+    top: 64%;
+    left: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 2rem;
+  }
 
-  .para p {
+  .para p,
+  .para2 p {
     color: #333333;
     font-weight: 700;
     font-size: 1.3rem;
     padding: 1rem;
     width: 15rem;
     text-align: left;
+  }
+
+  .para2 p {
+    font-size: 0.7rem;
   }
 }
 
@@ -380,6 +428,7 @@
     justify-content: center;
     align-items: center;
     padding: 1.7rem;
+    padding-bottom: 2.5rem;
     background-color: #ffffff;
   }
 
@@ -406,12 +455,28 @@
     word-wrap: break-word;
   }
 
-  .para p {
+  .para2 {
+    position: absolute;
+    top: 59%;
+    left: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.5rem;
+    height: 2rem;
+    word-wrap: break-word;
+  }
+
+  .para p,
+  .para2 p {
     color: #333333;
     font-weight: 700;
     font-size: 1.3rem;
     padding: 1rem;
     width: 15rem;
     text-align: left;
+  }
+  .para2 p {
+    font-size: 0.6rem;
   }
 }

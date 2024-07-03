@@ -162,10 +162,9 @@
   justify-content: center;
   align-items: center;
   width: 20rem;
-  height: 20rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1920px) {
   .PB-range-slider-div {
     width: 12rem;
     height: 1rem;

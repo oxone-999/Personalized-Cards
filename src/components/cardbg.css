@@ -134,9 +134,10 @@
   padding: 1rem;
   width: 32rem;
   text-align: left;
-  font-family: "Apricot Regular";
+  font-family: "Playwrite RO", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: normal;
-  font-weight: normal;
 }
 
 .para2 p {

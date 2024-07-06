@@ -451,7 +451,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15rem;
+    width: 11rem;
     height: 8rem;
     word-wrap: break-word;
   }
@@ -474,7 +474,7 @@
     font-weight: 700;
     font-size: 1.3rem;
     padding: 1rem;
-    width: 15rem;
+    width: 11rem;
     text-align: left;
   }
   .para2 p {

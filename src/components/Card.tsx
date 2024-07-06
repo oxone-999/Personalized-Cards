@@ -112,7 +112,6 @@ function Appp() {
     setParagraphText2(event.target.value);
   };
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle form submission logic here (optional)
